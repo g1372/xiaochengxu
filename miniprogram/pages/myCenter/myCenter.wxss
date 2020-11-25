@@ -1,0 +1,52 @@
+/**index.wxss**/
+page {
+  background: #ffffff;
+}
+
+.container {
+  width: 100%;
+  height: 450rpx;
+  background-color: rgb(203, 224, 216);
+}
+
+.userLogin {
+  width: 100%;
+  height: 150rpx;
+  margin-top: 100rpx;
+  display: flex;
+  align-items:center ;
+}
+
+.userLogin_img {
+  margin-left: 30rpx;
+  width: 150rpx;
+  height: 100%;
+}
+
+.userLogin_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.userLogin_name {
+  margin-left: 30rpx;
+  width: 40%;
+  color: #fff;
+}
+.userLogin_name view:nth-of-type(2){
+  width: 70rpx;
+  padding: 5rpx;
+  background-color: rgba(255,255,255,.3);
+  border-radius: 20rpx;
+  text-align: center;
+}
+
+.userLogin_btn {
+  height: 60rpx;
+  width: 150rpx;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  text-align: center;
+}

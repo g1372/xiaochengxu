@@ -1,0 +1,71 @@
+/**index.wxss**/
+page {
+  background: #f9fafb;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+/*  */
+.index-for {
+  width: 40%;
+  height: 200rpx;
+  float: left;
+  margin-left: 75rpx;
+  margin-top: 50rpx;
+  position: relative;
+  border-radius: 36rpx;
+}
+
+.index-for-left {
+  width: 25%;
+  height: 80rpx;
+  float: left;
+  margin-top: 20rpx;
+}
+
+.index-for-left image {
+  width: 110%;
+  height: 110%;
+}
+
+.index-for-right {
+  width: 65%;
+  height: 150rpx;
+  /* border: 1px rgb(194, 191, 6) solid; */
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+}
+
+.portrait {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.portrait image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.my-name {
+  margin-left: 60rpx;
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/books/books",
+    "pages/details/details",
+    "pages/components/uphead/uphead",
+    "pages/myCenter/myCenter"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "看书神器",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/books/books",
+        "text": "书城",
+        "iconPath": "./asset/icon/cinema.png",
+        "selectedIconPath": "./asset/icon/cinema1.png"
+      },
+      {
+        "pagePath": "pages/myCenter/myCenter",
+        "text": "我的",
+        "iconPath": "./asset/icon/movie.png",
+        "selectedIconPath": "./asset/icon/movie1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

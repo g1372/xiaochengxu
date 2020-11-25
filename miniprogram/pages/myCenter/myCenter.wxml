@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userLogin">
+    <view class="userLogin_img">
+      <image src="./user-unlogin.png"></image>
+    </view>
+    <view class="userLogin_name">
+      <view>游客</view>
+      <view>Lv.1</view>
+    </view>
+    <view class="userLogin_btn">
+      登录
+    </view>
+  </view>
+</view>

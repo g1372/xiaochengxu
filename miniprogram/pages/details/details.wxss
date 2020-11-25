@@ -1,0 +1,109 @@
+/* miniprogram/pages/details/details.wxss */
+.details {
+  position: relative;
+}
+
+.read {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  z-index: 1;
+  height: 200rpx;
+  background-color: #fff;
+}
+
+.read view {
+  width: 90%;
+  height: 90rpx;
+  margin: auto;
+  padding: 10rpx;
+  text-align: center;
+  background-color: #5ca392;
+  border-radius: 60rpx;
+  color: #fff;
+  font-size: 44rpx;
+  line-height: 90rpx;
+  margin-top: 50rpx;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 500rpx;
+  /* background: #000; */
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbnail>image {
+  width: 100%;
+  height: 100%;
+  filter: blur(40rpx);
+}
+
+.thumbnail_img {
+  position: absolute;
+  width: 100%;
+  height: 400rpx;
+  top: 100rpx;
+  /* border: 1px solid #000; */
+  text-align: center;
+  overflow: hidden;
+}
+
+.thumbnail_img image {
+  width: 280rpx;
+  height: 100%;
+  box-shadow: 10rpx 10rpx rgba(255, 255, 255, 0.5), 20rpx 20rpx rgba(255, 255, 255, 0.5);
+}
+
+.introduce {
+  margin-top: 25rpx;
+  text-align: center;
+  color: rgb(94, 94, 94);
+  font-size: 34rpx;
+}
+
+.introduce view {
+  margin-bottom: 15rpx;
+}
+
+.introduce view:nth-of-type(1) {
+  font-size: 46rpx;
+  color: #000;
+  font-weight: 500;
+}
+
+.genre {
+  margin-top: 35rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.genre text {
+  background-color: rgb(247, 247, 247);
+  color: rgb(141, 141, 141);
+  border-radius: 30rpx;
+  padding: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.intro {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 230rpx;
+}
+
+.intro view:nth-of-type(1) {
+  margin-top: 60rpx;
+  font-size: 46rpx;
+  color: #000;
+  font-weight: 500;
+}
+
+.intro view:nth-of-type(2) {
+  margin-top: 40rpx;
+  font-size: 42rpx;
+  color: rgb(87, 87, 87);
+  line-height: 80rpx
+}

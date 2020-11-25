@@ -1,0 +1,31 @@
+<!--miniprogram/pages/details/details.wxml-->
+<view class="details">
+  <!-- 图片 -->
+  <view class="thumbnail">
+    <image src="{{books.cover}}"></image>
+    <view class="thumbnail_img">
+      <image src="{{books.cover}}"></image>
+    </view>
+  </view>
+  <!-- 介绍 -->
+  <view class="introduce">
+    <view>{{books.title}}</view>
+    <view>{{books.author}}</view>
+    <view>{{books.followersNum}}字</view>
+  </view>
+  <!-- 类型 -->
+  <view class="genre">
+    <view wx:for="{{books.tagList}}" wx:for-item="item">
+      <text>{{item}}</text>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <view class="intro">
+    <view>简介</view>
+    <view>{{books.description}}</view>
+  </view>
+  <!-- 阅读 -->
+  <view class="read">
+    <view>立即阅读</view>
+  </view>
+</view>
