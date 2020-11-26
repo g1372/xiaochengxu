@@ -1,0 +1,13 @@
+/* miniprogram/pages/components/login/login.wxss */
+.btn{
+  background-color: #07c160;
+  color: #fff;
+}
+.agreement{
+  margin-bottom: 50rpx;
+  text-align: center;
+}
+
+.vie{
+  margin-top: 500rpx;
+}

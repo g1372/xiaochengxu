@@ -1,0 +1,7 @@
+<view class="vie">
+  <view class="agreement">您需要登录后才能操作哦</view>
+  <button class="btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+    微信授权登录
+  </button>
+
+</view>

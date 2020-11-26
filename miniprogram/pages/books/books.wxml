@@ -17,15 +17,15 @@
   <!-- 分类 -->
   <view class="classify">
     <view class="classify_view">
-      <image src=""></image>
+      <image src="../../asset/image/01.jpg"></image>
       <view>排行榜</view>
     </view>
     <view class="classify_view">
-      <image src=""></image>
+      <image  src="../../asset/image/02.jpg"></image>
       <view>VIP</view>
     </view>
     <view class="classify_view">
-      <image src=""></image>
+      <image  src="../../asset/image/03.jpg"></image>
       <view>分类</view>
     </view>
   </view>
@@ -33,12 +33,16 @@
   <view class="recommend">
     <view class="recommend_text">重磅推荐</view>
     <view class="booklist" wx:for="{{books}}" wx:for-item="item" wx:key="index">
-      <view class="booklist_view"  bindtap="goto"  id="{{item.bookId}}">
-        <view class="booklist_img"><image src="{{item.cover}}" alt=""></image></view>
+      <view class="booklist_view" bindtap="goto" id="{{item.bookId}}">
+        <view class="booklist_img">
+          <image src="{{item.cover}}" alt=""></image>
+        </view>
         <view class="booklist_text">
           <view>{{item.title}}</view>
           <view>{{item.description}}</view>
-          <view>{{item.author}}<text>{{item.popularity}}万人在阅读</text></view>
+          <view>{{item.author}}<text>{{item.popularity}}万人在阅读<text class="iconfont icon-redu"></text>
+            </text>
+          </view>
         </view>
       </view>
     </view>

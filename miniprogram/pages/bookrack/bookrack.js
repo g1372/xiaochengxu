@@ -1,35 +1,26 @@
-// miniprogram/pages/details/details.js
-const db = wx.cloud.database();
+// miniprogram/pages/bookrack/bookrack.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    books: [],
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    db.collection("storylist").doc({}).get().then(res => {
-      this.setData({
-        books: res.data.novelList[options.bookId]
-      })
-      // console.log(res.data.novelList[options.bookId]);
-    })
-  },
-  add:function(){
 
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 
   },
-
 
   /**
    * 生命周期函数--监听页面显示

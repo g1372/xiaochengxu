@@ -26,6 +26,6 @@
   </view>
   <!-- 阅读 -->
   <view class="read">
-    <view>立即阅读</view>
+    <view bindtap="add">立即阅读</view>
   </view>
 </view>

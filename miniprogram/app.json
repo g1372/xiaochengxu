@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/books/books",
+    "pages/myCenter/myCenter",
     "pages/details/details",
     "pages/components/uphead/uphead",
-    "pages/myCenter/myCenter"
+    "pages/books/books",
+    "pages/components/login/login",
+    "pages/bookrack/bookrack"
   ],
   "window": {
     "backgroundColor": "#fff",

@@ -1,15 +1,71 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userLogin">
-    <view class="userLogin_img">
-      <image src="./user-unlogin.png"></image>
+<view>
+  <!-- 登录 -->
+
+  <view class="container">
+    <image src="https://bpic.588ku.com//back_origin_min_pic/19/04/12/c0bea855e54481aed8c004eae9147182.jpg"></image>
+    <view class="userLogin">
+      <view class="userLogin_img">
+        <image src="{{userPhone?userPhone:'./user-unlogin.png'}}"></image>
+      </view>
+      <view class="userLogin_name">
+        <view>{{userName?userName:'游客'}}</view>
+        <view>Lv.1</view>
+      </view>
+      <view class="userLogin_btn" bindtap="goto" wx:if='{{!userPhone}}'>
+        登录
+      </view>
     </view>
-    <view class="userLogin_name">
-      <view>游客</view>
-      <view>Lv.1</view>
+    <!-- 登录下的列表 -->
+    <view class="integral">
+      <view class="integral_list">
+        获赞
+        <view>0</view>
+      </view>
+      <view class="integral_list">
+        信誉分
+        <view>0</view>
+      </view>
+      <view class="integral_list">
+        关注
+        <view>0</view>
+      </view>
+      <view class="integral_list">
+        粉丝
+        <view>0</view>
+      </view>
     </view>
-    <view class="userLogin_btn">
-      登录
+  </view>
+  <view class="module">
+    <view class="module_list special">
+      <text class="iconfont icon-xiaoxi"></text>
+      我的账户
+      <text class="iconfont icon-jiantou1 ztright"></text>
+    </view>
+    <view class="module_list">
+      <text class="iconfont icon-shangcheng"></text>
+      特遣商城
+      <text class="iconfont icon-jiantou1 ztright"></text>
+    </view>
+    <view class="module_list">
+      <text class="iconfont icon-shoucang"></text>
+      我的收藏
+      <text class="iconfont icon-jiantou1 ztright"></text>
+    </view>
+    <view class="module_list">
+      <text class="iconfont icon-Group-"></text>
+      我的账户
+      <text class="iconfont icon-jiantou1 ztright"></text>
+    </view>
+    <view class="module_list">
+      <text class="iconfont icon-tubiaolunkuo-"></text>
+      我的等级
+      <text class="iconfont icon-jiantou1 ztright"></text>
+    </view>
+    <view class="module_list">
+      <text class="iconfont icon-renwu"></text>
+      任务中心
+      <text class="iconfont icon-jiantou1 ztright"></text>
     </view>
   </view>
 </view>

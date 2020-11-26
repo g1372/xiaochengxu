@@ -9,8 +9,13 @@ Page({
    */
   data: {
     userPhone: '',
-    motto: "猫",
     userName: ''
+  },
+  userInfo: function (data) {
+    this.setData({
+      userPhone:data.avatarUrl,
+      userName:data.nickName
+    })
   },
 
   goimgs: function () {
@@ -19,79 +24,45 @@ Page({
     })
   },
 
-  //用户登录
-  bindGetUserInfo: function (e) {
-    // console.log(12314142+e);
-
-    const userInfo = e.detail.userInfo
-    if (!this.data.canIUse && userInfo) {
-      db.collection('users').add({
-        data: {
-          userPhone: userInfo.avatarUrl,
-          userName: userInfo.nickName,
-          gender: userInfo.gender
-        }
-      }).then(res => {
-        db.collection('users').doc(res._id).get().then(res => { //单条查询id
-          // console.log(sfgdafasfafasf);
-          app.userInfo = Object.assign(app.userInfo, res.data)
-          console.log(Object.assign(app.userInfo, res.data));
-
-          //2.将数据设置到this.data
-          this.setData({
-            userPhone: app.userInfo.userPhone,
-            userName: app.userInfo.userName,
-            canIUse: true
-          })
-        })
-      }).catch(err => {
-        console.log(err);
-      })
-    }
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-
-  // 跳转
-  // goimgs:function(){
-  //   wx.navigateTo({
-  //     url: '../../pages/components/uphead/uphead',
-  //   })
-  // },
+  goto: function () {
+    wx.navigateTo({
+      url: "../components/login/login"
+    })
+  }
+  ,
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   // 自动登录
-  // onReady: function () {
-  //   // 查找数据库信息 使用云函数
-  //   wx.cloud.callFunction({
-  //     // 云函数名称
-  //     name: 'login',
-  //     // 传给云函数的参数
-  //     data: {},
-  //   })
-  //     .then(res => {
-  //       // console.log(res.result.openid) 
-  //       const openid = res.result.openid
-  //       db.collection('users').where({
-  //         _openid: openid
-  //       }).get().then(res => {
-
-  //         app.userInfo = Object.assign(app.userInfo, res.data[0])
-
-  //         this.setData({
-  //           userPhone: app.userInfo.userPhone,
-  //           userName: app.userInfo.userName,
-  //           canIUse: true
-  //         })
-  //       })
-  //     })
-  // },
+  onReady: function () {
+    // 查找数据库信息 使用云函数
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'login',
+      // 传给云函数的参数
+      data: {},
+    })
+      .then(res => {
+        console.log(res.result) 
+        const openid = res.result.openid
+        db.collection('users').where({
+          _openid: openid
+        }).get().then(res => {
+          app.userInfo = Object.assign(app.userInfo, res.data[0])
+          this.setData({
+            userPhone: app.userInfo.userPhone,
+            userName: app.userInfo.userName,
+          })
+        })
+      })
+  },
 
   /**
    * 生命周期函数--监听页面显示
